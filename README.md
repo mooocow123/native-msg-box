@@ -52,7 +52,7 @@ API:
 Prerequisites
 -------------
 
-Currently the Linux verison requires `wmctrl` and `zentiy`.
+Currently the Linux version requires `wmctrl` and `zentiy`.
 
 To Do
 -----
