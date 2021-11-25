@@ -35,9 +35,23 @@ API:
 
     **options**
 
-    `msg` {string} REQUIRED The message to display
+    `msg` {string} REQUIRED The message to display, Example: `msg: "Hello World!"`
 
-    `title` {string} optional. Title for dialog (not available on all OSes ... yet?)
+    `title` {string} optional. Title for dialog (not available on all OSes ... yet?), Example: `title: "Hello World The Hello World :)"`
+    
+    `icon` {number} optional. Icon for dialog, Example: `icon: msgbox.Icon.STOP`
+    
+    `type` {number} optional. Type of dialog, Example: `type: 2`
+    
+    Full options example:
+    `
+    {
+        msg: "Hello World!",
+        title: "Hello World The Hello World :)",
+        icon: msgbox.Icon.STOP,
+        type: 2
+    }
+    `
 
     **callback**
 
