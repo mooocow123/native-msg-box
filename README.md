@@ -5,6 +5,10 @@ Allows you to display a native MessageBox / Dialog.
 
 By native we mean an OS level, not a browser level dialog.
 
+### Installing
+Just clone the repo or if you want the original module
+`npm install native-msg-box` or `yarn add native-msg-box` which I use.
+
 Example:
 --------
 
