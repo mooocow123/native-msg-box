@@ -31,20 +31,23 @@
 "use strict";
 
 var msgbox = require('../lib/msgbox.js');
-msgbox.prompt({
-  msg: "This \"thing\" uses 'quotes'",
-  title: "\"Quotes\"",
-}, function(err, result) {
-  switch (result) {
-    case msgbox.Result.YES:
-      console.log("pressed yes");
-      break;
-    case msgbox.Result.NO:
-      console.log("pressed no");
-      break;
-  }
-  example01();
-});
+
+function example00() {
+  msgbox.prompt({
+    msg: "This \"thing\" uses 'quotes'",
+    title: "\"Quotes\"",
+  }, function(err, result) {
+    switch (result) {
+      case msgbox.Result.YES:
+        console.log("pressed yes");
+        break;
+      case msgbox.Result.NO:
+        console.log("pressed no");
+        break;
+    }
+    example01();
+  });
+}
 
 function example01() {
   msgbox.prompt({
@@ -77,10 +80,28 @@ function example02() {
         break;
     }
 
-//    example03();
+    example03();
   });
 }
 
+function example03() {
+  msgbox.prompt({
+    msg: "Hug the cow?",
+    title: "Please",
+    icon: msgbox.Icon.QUESTION,
+    type: 1
+  }, function(err, result) {
+    switch (result) {
+      case msgbox.Result.OK:
+        console.log("Yay!");
+        break;
+      case msgbox.Result.CANCEL:
+        console.log("Why?");
+        break;
+    }
 
+//    example04();
+  });
+}
 
-
+module.exports = {example00: example00, example01: example01, example02: example02, example03: example03}
